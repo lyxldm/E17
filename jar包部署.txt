@@ -1,0 +1,27 @@
+#jar°ü ½Å±¾
+[Unit]
+Description=E17-portal-web-1.0-SNAPSHOT.jar
+After=syslog.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/jdk/jdk1.8.0_181/bin/java -jar /usr/local/e17/E17-portal-web-1.0-SNAPSHOT.jar
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+#Æô¶¯Í£Ö¹ÃüÁî
+systemctl start ESea.service
+systemctl stop EPW.service
+
+
+
+nohup java -Xms128m -Xmx128m -jar E17-portal-web-1.0-SNAPSHOT.jar >>/dev/null &
+nohup java -Xms128m -Xmx128m -jar E17-sso-1.0-SNAPSHOT.jar >>/dev/null &
+nohup java -Xms128m -Xmx128m -jar E17-manager-1.0-SNAPSHOT.jar >>/dev/null &
+
+
+
+netstat -tunlp  | grep 80

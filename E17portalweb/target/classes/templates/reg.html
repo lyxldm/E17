@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>17商城</title>
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+
+<body style=" background:#FFF;">
+ <div class="loginLogo">
+  <div class="logoMid">
+   <h1 class="logo" style="height:71px;padding-top:10px;"><a href="index.html"><img src="images/loginLogo.jpg" width="241" height="71" /></a></h1>
+   <div class="loginReg">
+    还没有会员账号?&nbsp;<a href="login.html">登录</a>
+   </div><!--loginReg/-->
+  </div><!--logoMid/-->
+ </div><!--loginLogo/-->
+ <div class="loginBox">
+  <img src="images/chengnuo.jpg" width="295" height="393" class="chengnuo" />
+  <form action="/register" id="form" method="post" class="reg">
+   <div class="regList">
+    <label><span class="red">*</span> 账户名</label>
+    <input type="text" name="username"/> <span style="color:#999;">请输入账号</span>
+   </div><!--regList/-->
+   <div class="regList">
+    <label><span class="red" >*</span> 请设置密码</label>
+    <input type="password" name="password"/>
+   </div><!--regList/-->
+   <div class="reg">
+    <input type="image" id="sub" src="images/reg.jpg" width="284" height="34" />
+   </div><!--reg/-->
+   <script type="text/javascript">
+    $(function(){
+        $("#sub").click(function () {
+            $("#form").submit();
+        });
+    });
+   </script>
+  </form><!--reg/-->
+  <div class="clears"></div>
+ </div><!--loginBox/-->
+</body>
+</html>

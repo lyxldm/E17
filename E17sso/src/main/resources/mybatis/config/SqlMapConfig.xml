@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <plugins>
+        <!--  pagehelper4.0 以前实现的接口-->
+       <!-- <plugin interceptor="com.github.pagehelper.PageHelper">-->
+
+        <!--  pagehelper4.0 以后实现的接口-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+        </plugin>
+    </plugins>
+
+</configuration>

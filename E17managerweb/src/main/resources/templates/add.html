@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="js/kindeditor/themes/default/default.css" />
+    <script src="js/kindeditor/lang/zh-CN.js"></script>
+    <script src="js/kindeditor/kindeditor-all-min.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<script>
+    KindEditor.ready(function(K) {
+        var editor = K.editor({
+            filePostName:"file",//上传组件名
+            uploadJson: "/img",//上传地址
+            dir:"image"//类型
+        });
+        K('#J_selectImage').click(function() {
+            editor.loadPlugin('multiimage', function() {
+                editor.plugin.multiImageDialog({
+                    clickFn : function(urlList) {
+                        var arr=[];
+                        //var div = K('#J_imageView');
+                        //div.html('');
+                        K.each(urlList, function(i, data) {
+                            arr.push(data.url);
+                        });
+                        $("#img").val(arr.join(","));
+                        editor.hideDialog();
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+<script>
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = K.create('textarea[name="des"]', {
+            resizeType : 1,
+            allowPreviewEmoticons : false,
+            allowImageUpload : false,
+            items : [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+        });
+    });
+</script>
+<body>
+<!--<select id="se">
+    <option value="onepcup">onepcup</option>
+    <option value="doupcup">doupcup</option>
+    <option value="corpcup">corpcup</option>
+    <option value="pettracup">pettracup</option>
+    <option value="icecup">icecup</option>
+    <option value="cake">cake</option>
+    <option value="salad">salad</option>
+    <option value="westdinner">westdinner</option>
+    <option value="chinadinner">chinadinner</option>
+    <option value="pack">pack</option>
+    <option value="pplate">pplate</option>
+    <option value="pbowl">pbowl</option>
+    <option value="pbag">pbag</option>
+    <option value="foodbag">foodbag</option>
+    <option value="recommend">recommend</option>
+    <option value="sales">sales</option>
+</select>-->
+<form action="item" method="post">
+    标题:<input name="title"/><br>
+    价格:<input name="price"/><br>
+    数量:<input name="number"/><br>
+    规格:<input name="size"/><br>
+    状态:<input name="status" value="1"><br>
+    <input type="button" id="J_selectImage" value="批量上传" /></br>
+    <input  type="hidden" id="img" name="img"/>
+    <textarea name="des"></textarea>
+    <input type="submit" value="fdsa"/>
+</form>
+</body>
+</html>

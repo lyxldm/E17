@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ldm.mapper.RecommendMapper" >
+
+    <resultMap id="BaseResultMap" type="cn.ldm.pojo.Recommend" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        <result column="img" property="img" jdbcType="VARCHAR" />
+        <result column="price" property="price" jdbcType="INTEGER" />
+        <result column="number" property="number" jdbcType="INTEGER" />
+        <result column="size" property="size" jdbcType="VARCHAR" />
+        <result column="des" property="des" jdbcType="LONGVARCHAR" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, title, img, price, number, size, des, status
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from recommend
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from recommend
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" parameterType="cn.ldm.pojo.Recommend" >
+        insert into recommend (id, title, img, 
+            price, number, size, 
+            des, status)
+        values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR}, 
+            #{price,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}, #{size,jdbcType=VARCHAR}, 
+            #{des,jdbcType=LONGVARCHAR}, #{status,jdbcType=INTEGER})
+    </insert>
+
+    <insert id="insertSelective" parameterType="cn.ldm.pojo.Recommend" >
+        insert into recommend
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="title != null" >
+                title,
+            </if>
+            <if test="img != null" >
+                img,
+            </if>
+            <if test="price != null" >
+                price,
+            </if>
+            <if test="number != null" >
+                number,
+            </if>
+            <if test="size != null" >
+                size,
+            </if>
+            <if test="des != null" >
+                des,
+            </if>
+            <if test="status != null" >
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="title != null" >
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="img != null" >
+                #{img,jdbcType=VARCHAR},
+            </if>
+            <if test="price != null" >
+                #{price,jdbcType=INTEGER},
+            </if>
+            <if test="number != null" >
+                #{number,jdbcType=INTEGER},
+            </if>
+            <if test="size != null" >
+                #{size,jdbcType=VARCHAR},
+            </if>
+            <if test="des != null" >
+                #{des,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="status != null" >
+                #{status,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="cn.ldm.pojo.Recommend" >
+        update recommend
+        <set >
+            <if test="title != null" >
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="img != null" >
+                img = #{img,jdbcType=VARCHAR},
+            </if>
+            <if test="price != null" >
+                price = #{price,jdbcType=INTEGER},
+            </if>
+            <if test="number != null" >
+                number = #{number,jdbcType=INTEGER},
+            </if>
+            <if test="size != null" >
+                size = #{size,jdbcType=VARCHAR},
+            </if>
+            <if test="des != null" >
+                des = #{des,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="status != null" >
+                status = #{status,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="cn.ldm.pojo.Recommend" >
+        update recommend
+        set title = #{title,jdbcType=VARCHAR},
+            img = #{img,jdbcType=VARCHAR},
+            price = #{price,jdbcType=INTEGER},
+            number = #{number,jdbcType=INTEGER},
+            size = #{size,jdbcType=VARCHAR},
+            des = #{des,jdbcType=LONGVARCHAR},
+            status = #{status,jdbcType=INTEGER}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

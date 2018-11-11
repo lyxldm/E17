@@ -1,0 +1,38 @@
+server:
+  port: 8886
+
+
+#mybatis
+spring:
+    application:
+        name: E17sso
+    datasource:
+       username: root
+       password: 20130204
+       #?serverTimezone=UTC
+       #在使用mysql的jdbc驱动最新版（6.0+）时，遇到数据库和系统时区差异引起的问题，The server time zone value 'XXXXXXXXX' is unrecognized
+       url: jdbc:mysql://39.107.70.161:3306/e17?serverTimezone=UTC
+    redis:
+      host: 39.107.70.161
+      port: 6379
+mybatis:
+    config-location: classpath:mybatis/config/SqlMapConfig.xml
+    #mapper-locations: cn/ldm/mapper/*.xml
+    #r如果把mapper的xml文件放在common中，会出现绑定错误，common是作为jar包国以来过来的，所以不再classpath下，所以无法找到
+    mapper-locations: classpath:mybatis/*.xml
+
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://39.106.211.119:8001/eureka
+  instance:
+      instance-id: E17sso8886
+      prefer-ip-address: true     #访问路径可以显示IP地址
+
+
+
+logging:
+  level: debug
+  file: /usr/local/e17/log/ES.log

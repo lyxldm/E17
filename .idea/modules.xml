@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/E17.iml" filepath="$PROJECT_DIR$/E17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E17common/E17common.iml" filepath="$PROJECT_DIR$/E17common/E17common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E17manager/E17manager.iml" filepath="$PROJECT_DIR$/E17manager/E17manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E17managerweb/E17managerweb.iml" filepath="$PROJECT_DIR$/E17managerweb/E17managerweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E17pay/E17pay.iml" filepath="$PROJECT_DIR$/E17pay/E17pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E17portalweb/E17portalweb.iml" filepath="$PROJECT_DIR$/E17portalweb/E17portalweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E17search/E17search.iml" filepath="$PROJECT_DIR$/E17search/E17search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E17sso/E17sso.iml" filepath="$PROJECT_DIR$/E17sso/E17sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekaServer/eurekaServer.iml" filepath="$PROJECT_DIR$/eurekaServer/eurekaServer.iml" />
+    </modules>
+  </component>
+</project>

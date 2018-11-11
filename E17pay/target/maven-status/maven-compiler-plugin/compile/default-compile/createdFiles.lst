@@ -1,0 +1,4 @@
+com\alipay\AppPay.class
+com\alipay\html.class
+com\alipay\PayController.class
+com\alipay\config\AlipayConfig.class

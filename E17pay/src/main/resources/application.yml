@@ -1,0 +1,28 @@
+server:
+  port: 8887
+
+  #解决标签有必须结束
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+  application:
+    name: E17pay
+
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://39.106.211.119:8001/eureka
+  instance:
+      instance-id: E17pay8887
+      prefer-ip-address: true     #访问路径可以显示IP地址
+
+
+#乱码
+
+
+
+logging:
+  level: debug
+  file: /usr/local/e17/log/EP.log

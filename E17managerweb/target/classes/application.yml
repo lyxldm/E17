@@ -1,0 +1,38 @@
+server:
+  port: 8883
+
+  #解决标签有必须结束
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+  application:
+    name: E17managerWeb
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+
+#图片服务器地址
+IMAGE_SERVER: http://39.106.211.119/
+
+#搜索模块地址
+SEARCH_URL: http://39.106.211.119:8885/
+
+
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://39.107.70.161:8001/eureka
+  instance:
+      instance-id: E17managerWeb8883
+      prefer-ip-address: true     #访问路径可以显示IP地址
+
+
+logging:
+  level: debug
+  file: /usr/local/e17/log/EMW.log
+
+

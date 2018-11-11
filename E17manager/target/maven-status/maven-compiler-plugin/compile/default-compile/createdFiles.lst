@@ -1,0 +1,6 @@
+cn\ldm\AppM.class
+cn\ldm\controller\ItemController.class
+cn\ldm\service\OrderServiceImpl.class
+cn\ldm\service\ItemServiceImpl.class
+cn\ldm\service\PayServiceImpl.class
+cn\ldm\service\GoodsbarServiceImpl.class

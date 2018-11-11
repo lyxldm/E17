@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="E17common" />
+        <module name="E17manager" />
+        <module name="E17managerweb" />
+        <module name="E17pay" />
+        <module name="E17portalweb" />
+        <module name="E17search" />
+        <module name="E17sso" />
+        <module name="eurekaServer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="E17" target="1.8" />
+      <module name="E17common" target="1.8" />
+      <module name="E17manager" target="1.8" />
+      <module name="E17managerweb" target="1.8" />
+      <module name="E17pay" target="1.8" />
+      <module name="E17portal" target="1.8" />
+      <module name="E17portalweb" target="1.8" />
+      <module name="E17search" target="1.8" />
+      <module name="E17sso" target="1.8" />
+      <module name="eurekaServer" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
