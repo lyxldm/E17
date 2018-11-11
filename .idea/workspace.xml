@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/E17portalweb/src/main/resources/application.yml" line="28" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4592fb6-671e-43fb-90ae-eb1b32ceef49" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-    </list>
+    <list default="true" id="e4592fb6-671e-43fb-90ae-eb1b32ceef49" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/E17common/target/" />
@@ -337,7 +335,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-24" />
     <option name="y" value="43" />
     <option name="width" value="1346" />
@@ -383,7 +381,7 @@
     <property name="project.structure.side.proportion" value="0.20278099" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/Git/Git-2.19.1-64-bit.exe" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelWidth1" value="75" />
@@ -797,7 +795,7 @@
       <workItem from="1541857422639" duration="93000" />
       <workItem from="1541898141752" duration="647000" />
       <workItem from="1541900558867" duration="77000" />
-      <workItem from="1541901035288" duration="1486000" />
+      <workItem from="1541901035288" duration="2085000" />
     </task>
     <task id="LOCAL-00001" summary="商城练习">
       <created>1541901471191</created>
@@ -842,7 +840,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428772000" />
+    <option name="totallyTimeSpent" value="429371000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -854,7 +852,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
