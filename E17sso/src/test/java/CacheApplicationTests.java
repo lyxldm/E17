@@ -19,6 +19,6 @@ public class CacheApplicationTests {
 	StringRedisTemplate stringRedisTemplate;
  	@Test
 	public void contextLoads() throws IOException {
-		stringRedisTemplate.opsForValue ().set ("a:fds1","333fds",10,TimeUnit.SECONDS);
+		stringRedisTemplate.opsForValue ().set ("sessionid:","dasdsa",1800, TimeUnit.SECONDS);
 	}
 }

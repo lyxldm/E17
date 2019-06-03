@@ -1,12 +1,12 @@
 server:
-  port: 80
+  port: 9000
 
 
 eureka:
-  client: #客户端注册进eureka服务列表内
+  client: #客户端注册进eureka服务列表内1
     service-url:
       #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-      defaultZone: http://39.106.211.119:8001/eureka
+      defaultZone: http://localhost:8001/eureka
   instance:
       instance-id: E17portalWeb8881
       prefer-ip-address: true
@@ -22,14 +22,14 @@ spring:
 
 
 #搜索模块地址
-SEARCH_URL: http://39.106.211.119:8885/
+SEARCH_URL: http://114.116.26.76:8885/
 
 
 
 logging:
-  level: info
+  level: debug
   file: /usr/local/e17/log/EPW.log
-
+#  file: D:/EPW.log
 
 ribbon:
   ReadTimeout: 60000

@@ -34,8 +34,8 @@ public class Search11ApplicationTests {
 	public void contextLoads1() throws  Exception{
 		Item item = new Item ();
 		item.setId (221);
-		item.setDes ("罗永祥在1111sd");
-		itemRopository.save (item);
+		item.setDes ("罗永祥在11113sd");
+		itemRopository.delete (46);
 	}
 	@Test
 	public void contextLoads() throws  Exception{

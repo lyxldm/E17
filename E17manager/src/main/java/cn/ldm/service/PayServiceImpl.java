@@ -41,9 +41,8 @@ public class PayServiceImpl {
         Goodsorder goodsorder = goodsorderMapper.selectByOrder (orderid);
         Address address = addressMapper.selectByPrimaryKey (goodsorder.getAddressId ());
         goodsbarMapper.deleteByCustid (address.getCustId ());
-        goodsorder.setStatus (1);
         goodsorderMapper.updateByPrimaryKey (goodsorder);
-        return "redirect:http://39.107.70.161:80/index.html";
+        return "redirect:http://114.116.26.76:9000/index.html";
     }
     /*@GetMapping("/clearbar1")
     public void  clearGoodsbar1(HttpServletRequest request,String out_trade_no) throws UnsupportedEncodingException, AlipayApiException {

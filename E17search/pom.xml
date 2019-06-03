@@ -36,6 +36,17 @@
             <scope>test</scope>
         </dependency>
 
+
+        <!--Feign  必须要feign—httpcliebt，否则不支持@Getmapping-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+        </dependency>
+
     </dependencies>
 
 

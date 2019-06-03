@@ -79,4 +79,6 @@ public class Address implements Serializable{
     public void setCustId(Integer custId) {
         this.custId = custId;
     }
+
+
 }

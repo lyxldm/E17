@@ -1,8 +1,10 @@
 package cn.ldm.controller;
 
+import cn.ldm.mapper.ItemMapper;
 import cn.ldm.pojo.Item;
 import cn.ldm.pojo.man;
 import cn.ldm.repository.ItemRopository;
+import cn.ldm.service.ItemService;
 import org.apache.commons.lang.StringUtils;
 import org.apache.lucene.util.QueryBuilder;
 import org.elasticsearch.index.query.BoolQueryBuilder;
@@ -28,6 +30,7 @@ public class ItemController {
     ItemRopository itemRopository;
     @PostMapping("/search/add")
     Boolean add(@RequestBody Item item){
+        System.out.println (item );
         itemRopository.index (item);
         return true;
     }

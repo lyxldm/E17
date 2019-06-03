@@ -8,6 +8,8 @@ import cn.ldm.pojo.Page;
 import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -22,6 +24,7 @@ import java.util.concurrent.TimeUnit;
 @Transactional
 @RestController
 public class CustomerServiceImpl implements CustomerService {
+
     @Autowired
     CustomerMapper customerMapper;
 
@@ -39,14 +42,18 @@ public class CustomerServiceImpl implements CustomerService {
     @GetMapping("/login")
     @Override
     public String login(@RequestBody Customer customer) {
+        Logger logger = LoggerFactory.getLogger (CustomerServiceImpl.class);
         Customer login = customerMapper.login (customer.getUsername ( ));
         if(login.getPassword ().equals (customer.getPassword ())){
             String token = null;
             try {
                 token = UUID.randomUUID ( ).toString ();
                 String customer1 = JSON.toJSONString (login);
+                logger.info ("cutomer--------------------------"+customer1);
                 stringRedisTemplate.opsForValue ().set ("sessionid:"+token,customer1,1800, TimeUnit.SECONDS);
+                
             } catch (Exception e) {
+                logger.info ("error--------------------------");
                 e.printStackTrace ( );
             }
             return token;
